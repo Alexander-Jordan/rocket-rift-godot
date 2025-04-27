@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bua8h7f2d4u26"]
 
 [ext_resource type="Theme" uid="uid://f1t8okxjimt2" path="res://ui/base_theme.tres" id="1_t2egg"]
-[ext_resource type="Script" path="res://ui/game_over_screen/game_over_screen.gd" id="2_rovtf"]
+[ext_resource type="Script" uid="uid://3m54w1qs3fir" path="res://ui/game_over_screen/game_over_screen.gd" id="2_rovtf"]
 [ext_resource type="AudioStream" uid="uid://b0m613tntjxfn" path="res://assets/original_sfx/achievement_complete.wav" id="3_q2c20"]
 [ext_resource type="PackedScene" uid="uid://dibncjywm4vpa" path="res://ui/leaderboard/leaderboard_entry.tscn" id="3_tevej"]
 [ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="4_10ec3"]

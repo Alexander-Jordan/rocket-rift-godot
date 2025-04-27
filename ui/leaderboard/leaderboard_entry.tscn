@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dibncjywm4vpa"]
 
 [ext_resource type="Theme" uid="uid://f1t8okxjimt2" path="res://ui/base_theme.tres" id="1_2m1wu"]
-[ext_resource type="Script" path="res://ui/leaderboard/leaderboard_entry_ui.gd" id="2_mpjbl"]
+[ext_resource type="Script" uid="uid://8b11fq3poeiu" path="res://ui/leaderboard/leaderboard_entry_ui.gd" id="2_mpjbl"]
 
 [node name="LeaderboardEntryUI" type="HBoxContainer"]
 anchors_preset = 15

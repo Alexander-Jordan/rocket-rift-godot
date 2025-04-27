@@ -1,11 +1,11 @@
 [gd_scene load_steps=37 format=3 uid="uid://cw101ycuhjuav"]
 
 [ext_resource type="Texture2D" uid="uid://cipyka5o76usi" path="res://entities/player/barry_spritesheet.png" id="1_4x2ys"]
-[ext_resource type="Script" path="res://entities/player/player.gd" id="1_pptrt"]
-[ext_resource type="Script" path="res://common/components/destruct/destructible_2d.gd" id="3_n18c8"]
-[ext_resource type="Script" path="res://common/components/collect/collector_2d.gd" id="4_bbnl5"]
+[ext_resource type="Script" uid="uid://cpotch8864xnc" path="res://entities/player/player.gd" id="1_pptrt"]
+[ext_resource type="Script" uid="uid://cjixnbjcocece" path="res://common/components/destruct/destructible_2d.gd" id="3_n18c8"]
+[ext_resource type="Script" uid="uid://da82m1d8p2j5u" path="res://common/components/collect/collector_2d.gd" id="4_bbnl5"]
 [ext_resource type="AudioStream" uid="uid://duo0np7lg2c8h" path="res://assets/original_sfx/jetpack_firelp.wav" id="5_2nm23"]
-[ext_resource type="Script" path="res://entities/player/stepping_audio.gd" id="6_s5n0l"]
+[ext_resource type="Script" uid="uid://ceqo8ucrik0gb" path="res://entities/player/stepping_audio.gd" id="6_s5n0l"]
 [ext_resource type="AudioStream" uid="uid://bl68ioiefblep" path="res://assets/original_sfx/run_metal_left_1.wav" id="7_sdgdw"]
 [ext_resource type="AudioStream" uid="uid://tdjn3pcuttd0" path="res://assets/original_sfx/run_metal_left_2.wav" id="8_fn6n2"]
 [ext_resource type="AudioStream" uid="uid://d0yvqwk2i2flj" path="res://assets/original_sfx/run_metal_left_3.wav" id="9_2r5g8"]
@@ -84,10 +84,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ihqrn"]
 _data = {
-"RESET": SubResource("Animation_ob4fw"),
-"fall": SubResource("Animation_hrh6l"),
-"fly": SubResource("Animation_4bow7"),
-"run": SubResource("Animation_ig7lf")
+&"RESET": SubResource("Animation_ob4fw"),
+&"fall": SubResource("Animation_hrh6l"),
+&"fly": SubResource("Animation_4bow7"),
+&"run": SubResource("Animation_ig7lf")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kv5sd"]

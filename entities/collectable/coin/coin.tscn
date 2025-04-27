@@ -1,9 +1,9 @@
 [gd_scene load_steps=18 format=3 uid="uid://c0daa8774747j"]
 
-[ext_resource type="Script" path="res://entities/collectable/coin/coin.gd" id="1_6vs20"]
+[ext_resource type="Script" uid="uid://ptasujl4l6g3" path="res://entities/collectable/coin/coin.gd" id="1_6vs20"]
 [ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="2_dbmr0"]
-[ext_resource type="Script" path="res://common/components/collect/collectable_2d.gd" id="2_msi5q"]
-[ext_resource type="Script" path="res://utilities/spawner/spawnable/spawnable.gd" id="3_6t4p2"]
+[ext_resource type="Script" uid="uid://cfq3n2iyp6a4y" path="res://common/components/collect/collectable_2d.gd" id="2_msi5q"]
+[ext_resource type="Script" uid="uid://dxvwxnynmf2v8" path="res://utilities/spawner/spawnable/spawnable.gd" id="3_6t4p2"]
 [ext_resource type="AudioStream" uid="uid://dddxumg2gpbga" path="res://assets/original_sfx/coin_pickup_1.wav" id="6_ufq8h"]
 [ext_resource type="AudioStream" uid="uid://ktttb5iuwk8n" path="res://assets/original_sfx/coin_pickup_2.wav" id="7_x7l2a"]
 [ext_resource type="AudioStream" uid="uid://gtjcsh5ad5pr" path="res://assets/original_sfx/coin_pickup_3.wav" id="8_7engc"]
