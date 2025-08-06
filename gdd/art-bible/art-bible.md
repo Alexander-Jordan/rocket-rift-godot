@@ -1,4 +1,4 @@
-# JETPACK JOYRIDE - THE REMAKE (Art Bible)
+# ROCKET RIFT (Art Bible)
 
 ## Table of content
 
@@ -39,9 +39,9 @@
 
 ## General
 
-The art style will be as close to the original as possible, with some small adjustments to keep the scope down. It might even reuse the existing artwork.
+The art style will will first take inspiration of the original, but still be original.
 
-I will also try to get my nephew in somehow, maybe as the main character. Could maybe be done by modifying the original character.
+I will also try to get my nephew in somehow, maybe as the main character.
 
 ### Original
 
@@ -57,13 +57,9 @@ I will also try to get my nephew in somehow, maybe as the main character. Could 
 
 ![collecting_coins](./assets/coins.jpg)
 
-#### Slot machine ending:
-
-![slot_machine_ending](./assets/slot_machine.jpg)
-
 ## Visual Hook
 
-It looks like the original Jetpack Joyride.
+It will be pixel art as the original.
 
 ## 2D
 
@@ -73,15 +69,9 @@ It looks like the original Jetpack Joyride.
 
 # Characters
 
-## Barry Steakfries
+## Isaac Jordan
 
 ![barry_full_sprite_sheet](./assets/barry_full_sprite_sheet.jpg)
-
-## Evil Scientists
-
-![scientists_in_game](./assets/scientists_in_game.jpg)
-
-![scientists_concept](./assets/scientists_concept.jpg)
 
 # Entities
 
@@ -103,19 +93,9 @@ It looks like the original Jetpack Joyride.
 
 # Environments
 
-## Original
-
-In the original the laboratory changes from the typical laboritory rooms to some greenary, caves, or water parts.
-
-![hallway](./assets/gameplay.jpg)
-
-![hallway_2](./assets/coins.jpg)
-
 ## The remake
 
-To keep the scope down this remake is only going to have the laboritory rooms included.
-
-It could include some blinking lights, signs and desks/computers.
+To keep the scope down this remake is only going to have a simple room included.
 
 ### Menu section
 
@@ -217,7 +197,6 @@ The base resolution is 1920x1080 (16:9), and all game assets that covers the who
 ## Naming Conventions
 
 As Godot's naming convention: [snake_case](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#naming-conventions).
-
 
 ## Workflows
 

@@ -1,4 +1,4 @@
-# JETPACK JOYRIDE - THE REMAKE (Level Design Document)
+# ROCKET RIFT (Level Design Document)
 
 ## Table of content
 
@@ -8,11 +8,11 @@
 - [Implementation](#implementation)
 - [Content List](#content-list)
 - [Technical Guidelines](#technical-guidelines)
-    - [Software](#software)
-    - [File Formats](#file-formats)
-    - [Restrictions](#restrictions)
-    - [Naming Conventions](#naming-conventions)
-    - [Workflows](#workflows)
+	- [Software](#software)
+	- [File Formats](#file-formats)
+	- [Restrictions](#restrictions)
+	- [Naming Conventions](#naming-conventions)
+	- [Workflows](#workflows)
 
 ### Other Design Documents:
 
@@ -67,8 +67,6 @@ Different spawn groups could be implemented where the probability of the entitie
 
 The coins should be able to spawn in different shapes/groups. A straight or curvy line, a short or long block, or even make up words.
 
-Sometimes there should also spawn some floaty spin tokens.
-
 The systems for spawning collecables and obstacles should be smart enough to not overlap them or make it impossible to collect any collectables.
 
 # Content List
@@ -78,7 +76,6 @@ The systems for spawning collecables and obstacles should be smart enough to not
 | UI | Main menu |
 | UI | Settings menu |
 | UI | Pause menu |
-| UI | Slot machine |
 | UI | End screen |
 | Level | Main level |
 

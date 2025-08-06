@@ -1,4 +1,4 @@
-# JETPACK JOYRIDE - THE REMAKE (Audio Design Document)
+# ROCKET RIFT (Audio Design Document)
 
 ## Table of content
 
@@ -6,20 +6,20 @@
 - [Outline/Objectives](#outlineobjectives)
 - [Research](#research)
 - [Implementation](#implementation)
-    - [General](#general-1)
-    - [Music](#music-1)
-    - [SFX](#sfx-1)
-    - [UI](#ui-1)
+	- [General](#general-1)
+	- [Music](#music-1)
+	- [SFX](#sfx-1)
+	- [UI](#ui-1)
 - [Content List](#content-list)
-    - [Music](#music-2)
-    - [SFX](#sfx-2)
-    - [UI](#ui-2)
+	- [Music](#music-2)
+	- [SFX](#sfx-2)
+	- [UI](#ui-2)
 - [Technical Guidelines](#technical-guidelines)
-    - [Software](#software)
-    - [File Formats](#file-formats)
-    - [Restrictions](#restrictions)
-    - [Naming Conventions](#naming-conventions)
-    - [Workflows](#workflows)
+	- [Software](#software)
+	- [File Formats](#file-formats)
+	- [Restrictions](#restrictions)
+	- [Naming Conventions](#naming-conventions)
+	- [Workflows](#workflows)
 
 ### Other Design Documents:
 
@@ -29,7 +29,7 @@
 
 # Outline/Objectives
 
-The audio should be punchy, immersive, and cocky, as in the original Jetpack Joyride.
+The audio should be punchy, immersive, and cocky, as in the original.
 
 # Research
 
@@ -106,7 +106,7 @@ When going back to the main menu the music transitions to that music.
 
 Toggles for SFX will either enable or disable the music.
 
-There should be SFX for when the player runs on the floor, the jetpack, obstacles, explosions, alarms/warnings and the slot machine. Also maybe some state SFX like when the game starts or ends.
+There should be SFX for when the player runs on the floor, the jetpack, obstacles, explosions, and alarms/warnings. Also maybe some state SFX like when the game starts or ends.
 
 ## UI
 
@@ -138,18 +138,12 @@ There should be SFX for clicking buttons at least, but maybe even some more.
 | Player | Revive |
 | Jetpack | Machinegun |
 | Collectable | Coins |
-| Collectable | Spin tokens |
 
 ## UI
 
 | Type | Name |
 |---|---|
 | Button | Button click |
-| Button | Purchase |
-| Slot machine | Pull lever |
-| Slot machine | Slots spin |
-| Slot machine | Win |
-| Slow machine | Lose |
 
 # Technical Guidelines
 
