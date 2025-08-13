@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cipyka5o76usi"
-path="res://.godot/imported/barry_spritesheet.png-f72b1a8df5a595ee93cd63d74103c758.ctex"
+uid="uid://l65p167d3j1y"
+path="res://.godot/imported/player_spritesheet.png-997b8e30076f49c2caa7adf3b6a6478e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/barry_spritesheet.png"
-dest_files=["res://.godot/imported/barry_spritesheet.png-f72b1a8df5a595ee93cd63d74103c758.ctex"]
+source_file="res://entities/player/player_spritesheet.png"
+dest_files=["res://.godot/imported/player_spritesheet.png-997b8e30076f49c2caa7adf3b6a6478e.ctex"]
 
 [params]
 
