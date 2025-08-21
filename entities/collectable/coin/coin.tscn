@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c0daa8774747j"]
+[gd_scene load_steps=16 format=3 uid="uid://c0daa8774747j"]
 
 [ext_resource type="Script" uid="uid://ptasujl4l6g3" path="res://entities/collectable/coin/coin.gd" id="1_6vs20"]
 [ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="2_dbmr0"]
@@ -27,21 +27,13 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("2_dbmr0")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_otxs4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_an1kk"]
 atlas = ExtResource("2_dbmr0")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cpot5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_d56tc"]
 atlas = ExtResource("2_dbmr0")
 region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_71u6v"]
-atlas = ExtResource("2_dbmr0")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_drc8y"]
-atlas = ExtResource("2_dbmr0")
-region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6yyfa"]
 animations = [{
@@ -59,16 +51,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_7fbs5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_otxs4")
+"texture": SubResource("AtlasTexture_an1kk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cpot5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_71u6v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_drc8y")
+"texture": SubResource("AtlasTexture_d56tc")
 }],
 "loop": true,
 "name": &"default",
