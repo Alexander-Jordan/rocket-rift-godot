@@ -3,10 +3,10 @@
 [ext_resource type="Theme" uid="uid://f1t8okxjimt2" path="res://ui/base_theme.tres" id="1_terh0"]
 [ext_resource type="Texture2D" uid="uid://dxmamdwwu5hul" path="res://ui/pause_icon.png" id="2_fsihy"]
 [ext_resource type="Script" uid="uid://c1ukk4kbekmeo" path="res://ui/hud/hud.gd" id="2_pbtj6"]
-[ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="3_ckfjp"]
+[ext_resource type="Texture2D" uid="uid://bh8eunoerlxqa" path="res://entities/collectable/coin/clock.png" id="3_w75iv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3tqg"]
-atlas = ExtResource("3_ckfjp")
+atlas = ExtResource("3_w75iv")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmgr4"]

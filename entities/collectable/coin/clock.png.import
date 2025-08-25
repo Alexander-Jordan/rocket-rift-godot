@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botxktqdvtlc4"
-path="res://.godot/imported/coin_sprite.png-e6dee980a3ea7784ff0a9253b8071410.ctex"
+uid="uid://bh8eunoerlxqa"
+path="res://.godot/imported/clock.png-f833ea0b935952130d82b67507a2fac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/collectable/coin/coin_sprite.png"
-dest_files=["res://.godot/imported/coin_sprite.png-e6dee980a3ea7784ff0a9253b8071410.ctex"]
+source_file="res://entities/collectable/coin/clock.png"
+dest_files=["res://.godot/imported/clock.png-f833ea0b935952130d82b67507a2fac7.ctex"]
 
 [params]
 

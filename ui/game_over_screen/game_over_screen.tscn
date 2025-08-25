@@ -4,11 +4,11 @@
 [ext_resource type="Script" uid="uid://3m54w1qs3fir" path="res://ui/game_over_screen/game_over_screen.gd" id="2_rovtf"]
 [ext_resource type="AudioStream" uid="uid://b0m613tntjxfn" path="res://assets/original_sfx/achievement_complete.wav" id="3_q2c20"]
 [ext_resource type="PackedScene" uid="uid://dibncjywm4vpa" path="res://ui/leaderboard/leaderboard_entry.tscn" id="3_tevej"]
-[ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="4_10ec3"]
 [ext_resource type="AudioStream" uid="uid://c6gk44kojsfmf" path="res://assets/original_sfx/ui_select.wav" id="4_w7vc5"]
+[ext_resource type="Texture2D" uid="uid://bh8eunoerlxqa" path="res://entities/collectable/coin/clock.png" id="6_x77vp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7u26"]
-atlas = ExtResource("4_10ec3")
+atlas = ExtResource("6_x77vp")
 region = Rect2(0, 0, 32, 32)
 
 [node name="GameOverScreen" type="Control"]
