@@ -7,8 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://453j18wu2x47" path="res://ui/audio_icons.png" id="5_mpjth"]
 
 [sub_resource type="Gradient" id="Gradient_irjim"]
-offsets = PackedFloat32Array(0, 0.5, 0.5, 1)
-colors = PackedColorArray(0.2928, 0.402, 0.48, 1, 0.337255, 0.427451, 0.490196, 1, 0.482353, 0.603922, 0.690196, 1, 0.483, 0.60375, 0.69, 1)
+colors = PackedColorArray(0.825483, 0.00193197, 0.981396, 1, 1, 0.729127, 0.908033, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_nh50u"]
 gradient = SubResource("Gradient_irjim")

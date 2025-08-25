@@ -39,7 +39,7 @@ size_flags_horizontal = 8
 
 [node name="coins" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.929412, 0.45098, 1)
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 48
 text = "000"
@@ -57,20 +57,20 @@ theme_override_constants/separation = -64
 
 [node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_colors/font_color = Color(1, 0.725178, 0.802016, 1)
 theme_override_constants/outline_size = 64
 theme_override_font_sizes/font_size = 256
-text = "JETPACK"
+text = "ROCKET"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.7445, 0.27, 1)
+theme_override_colors/font_color = Color(0.88035, 0.000599902, 0.876267, 1)
 theme_override_constants/outline_size = 64
 theme_override_font_sizes/font_size = 256
-text = "JOYRIDE"
+text = "RIFT"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -85,7 +85,7 @@ layout_mode = 2
 size_flags_vertical = 10
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 64
-text = "TOUCH ANYWHERE TO PLAY!"
+text = "TOUCH ANYWHERE TO PLAY"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true

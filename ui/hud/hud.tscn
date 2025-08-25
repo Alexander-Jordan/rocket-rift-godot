@@ -70,7 +70,7 @@ layout_mode = 2
 
 [node name="coins" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.929412, 0.45098, 1)
+theme_override_colors/font_color = Color(0.933333, 0.615686, 0.270588, 1)
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 48
 text = "000"

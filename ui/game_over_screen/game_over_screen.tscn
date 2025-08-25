@@ -48,7 +48,7 @@ uppercase = true
 
 [node name="distance" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.55, 0, 1)
+theme_override_colors/font_color = Color(0.822232, 0.00135055, 0.930308, 1)
 theme_override_constants/outline_size = 64
 theme_override_font_sizes/font_size = 256
 text = "0M"
@@ -71,7 +71,7 @@ uppercase = true
 
 [node name="coins" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.929412, 0.45098, 1)
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 64
 text = "0"
