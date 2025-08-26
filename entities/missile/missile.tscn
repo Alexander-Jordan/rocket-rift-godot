@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://dtigid26sgbs5"]
 
 [ext_resource type="Script" uid="uid://df64soe2muduc" path="res://entities/missile/missile.gd" id="1_e4log"]
-[ext_resource type="AudioStream" uid="uid://mgy43m0sw82f" path="res://assets/original_sfx/missile_launch.wav" id="2_40qnw"]
+[ext_resource type="AudioStream" uid="uid://yvcrcq7utd1e" path="res://entities/missile/missile_launch.wav" id="2_4th62"]
 [ext_resource type="Script" uid="uid://b3x22yd8gl660" path="res://common/components/destruct/destructor_2d.gd" id="2_ehd8s"]
-[ext_resource type="AudioStream" uid="uid://btspxtoyyxgip" path="res://assets/original_sfx/missile_warning.wav" id="3_ig0qo"]
+[ext_resource type="AudioStream" uid="uid://c1vs7w2y5e5yj" path="res://entities/missile/missile_warning.wav" id="3_4th62"]
 [ext_resource type="Script" uid="uid://dxvwxnynmf2v8" path="res://utilities/spawner/spawnable/spawnable.gd" id="4_bn04m"]
+[ext_resource type="AudioStream" uid="uid://csyriwmtixg52" path="res://entities/missile/missile_explosion.wav" id="5_4th62"]
 [ext_resource type="Texture2D" uid="uid://biptq4dk3ujyd" path="res://entities/missile/missile_warning.png" id="5_axx0x"]
-[ext_resource type="AudioStream" uid="uid://bohqgaph88tyi" path="res://assets/original_sfx/rocket_explode_1.wav" id="5_wkpev"]
 [ext_resource type="Texture2D" uid="uid://c6ux174k3hjfr" path="res://entities/missile/missile.png" id="6_4th62"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wn0"]
@@ -78,12 +78,12 @@ color_ramp = SubResource("GradientTexture1D_da7m7")
 
 [node name="Missile" type="Node2D"]
 script = ExtResource("1_e4log")
-audio_launch = ExtResource("2_40qnw")
-audio_warning = ExtResource("3_ig0qo")
+audio_launch = ExtResource("2_4th62")
+audio_warning = ExtResource("3_4th62")
 
 [node name="Destructor2D" type="Area2D" parent="."]
 script = ExtResource("2_ehd8s")
-audio_streams = Array[AudioStream]([ExtResource("5_wkpev")])
+audio_streams = Array[AudioStream]([ExtResource("5_4th62")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destructor2D"]
 position = Vector2(44, 0)
