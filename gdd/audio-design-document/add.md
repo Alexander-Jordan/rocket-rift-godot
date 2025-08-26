@@ -4,7 +4,6 @@
 
 - [Other Design Documents](#other-design-documents)
 - [Outline/Objectives](#outlineobjectives)
-- [Research](#research)
 - [Implementation](#implementation)
 - [Content List](#content-list)
 - [Technical Guidelines](#technical-guidelines)
@@ -23,14 +22,6 @@
 ## Outline/Objectives
 
 The audio should be punchy, immersive, and cocky, as in the original.
-
-## Research
-
-### Playlists
-
-[YouTube: Jetpack Joyride Original Soundtrack](https://youtube.com/playlist?list=PLuNyw_z6mVdVP-P786PRmBxqdboTSL8Ja&feature=shared)
-
-[Downloadable: Jetpack Joyride (Original Game Soundtrack)](https://downloads.khinsider.com/game-soundtracks/album/jetpack-joyride-original-game-soundtrack-2021-android-ios)
 
 ### File formats, compression, and size
 
@@ -99,7 +90,7 @@ When going back to the main menu the music transitions to that music.
 
 Toggles for SFX will either enable or disable the music.
 
-There should be SFX for when the player runs on the floor, the jetpack, obstacles, explosions, and alarms/warnings. Also maybe some state SFX like when the game starts or ends.
+There should be SFX for when the player runs on the floor, flies, obstacles, explosions, and alarms/warnings. Also maybe some state SFX like when the game starts or ends.
 
 ### UI
 
@@ -121,15 +112,13 @@ There should be SFX for clicking buttons at least, but maybe even some more.
 | Type | Name |
 |---|---|
 | Obstacle | Zapper |
-| Obstacle | Laser |
 | Obstacle | Missile |
 | Obstacle | Warning for missile |
-| Obstacle | Hurt by the zapper/laser |
+| Obstacle | Hurt by the zapper |
 | Obstacle | Hurt by the missile |
 | Environment | Explosion |
 | Player | Running |
-| Player | Revive |
-| Jetpack | Machinegun |
+| Player | Flies |
 | Collectable | Coins |
 
 ### UI list

@@ -68,7 +68,7 @@ Different spawn groups could be implemented where the probability of the entitie
 
 The coins should be able to spawn in different shapes/groups. A straight or curvy line, a short or long block, or even make up words.
 
-The systems for spawning collecables and obstacles should be smart enough to not overlap them or make it impossible to collect any collectables.
+The systems for spawning collectables and obstacles should be smart enough to not overlap them or make it impossible to collect any collectables.
 
 ## Content List
 

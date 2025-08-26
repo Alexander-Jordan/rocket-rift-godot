@@ -36,14 +36,12 @@ Rocket Rift is a side-scrolling endless runner action video game, that takes ins
 
 ## Gameplay
 
-[_Gameplay from the original Jetpack Joyride_](https://www.youtube.com/watch?v=OhU7tLtOIgE)
-
 ### Gameplay Hook
 
 Travel as far as possible, collect coins, and avoid hazards.
 
-When the player presses anywhere on the touchscreen, the jetpack fires and the player rises.
-When the player lets go, the jetpack turns off, and the player falls.
+When the player presses anywhere on the touchscreen, the player rises.
+When the player lets go, the player falls.
 
 Because he is continually in motion, the player does not control his speed, simply his movement along the vertical axis.
 
@@ -56,7 +54,7 @@ When you die you can play again to beat the highest score.
 
 #### Player
 
-By tapping/holding your finger to the screen, the player rises with the jetpack.
+By tapping/holding your finger to the screen, the player rises by flying.
 When no input is given the player falls down to the floor and runs.
 
 The player always move from left to right automatically, and the speed increases while you play.
@@ -73,7 +71,6 @@ They don't affect the player, but if they're hit by the player or explosions the
 
 - Zappers
 - Missiles
-- Lasers
 
 #### Collectables
 
@@ -134,7 +131,7 @@ Promoted and available for free on:
 
 ### Target
 
-Jetpack Joyride entusiasts and gamedevs.
+Jetpack Joyride enthusiasts and gamedevs.
 
 ### Localization
 
