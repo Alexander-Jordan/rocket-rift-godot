@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://f1t8okxjimt2"]
 
-[ext_resource type="FontFile" uid="uid://clr3gfgadenc6" path="res://assets/fonts/nfs_font/NFS_by_JLTV.ttf" id="1_d8awb"]
+[ext_resource type="FontFile" uid="uid://74r6ucslsbtp" path="res://assets/fonts/hemi_head/Hemi Head Bd It.otf" id="1_d8awb"]
 
 [resource]
 default_font = ExtResource("1_d8awb")
