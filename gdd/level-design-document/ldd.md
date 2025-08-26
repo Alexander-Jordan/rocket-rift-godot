@@ -8,54 +8,55 @@
 - [Implementation](#implementation)
 - [Content List](#content-list)
 - [Technical Guidelines](#technical-guidelines)
-	- [Software](#software)
-	- [File Formats](#file-formats)
-	- [Restrictions](#restrictions)
-	- [Naming Conventions](#naming-conventions)
-	- [Workflows](#workflows)
+  - [Software](#software)
+  - [File Formats](#file-formats)
+  - [Restrictions](#restrictions)
+  - [Naming Conventions](#naming-conventions)
+  - [Workflows](#workflows)
 
-### Other Design Documents:
+## Other Design Documents
 
 - [GDD](../game-design-document/gdd.md)
 - [Art Bible](../art-bible/art-bible.md)
 - [ADD](../audio-design-document/add.md)
 
-# Outline/Objectives
+## Outline/Objectives
 
 As the original Jetpack Joyride the level is endless, and the goal is to get as far as possible to collect points, and on the side you can collect coins.
 
-# Research
+## Research
 
-## Obstacles and Difficulty
+### Obstacles and Difficulty
 
 [A great answer how to increase the difficulty in an endless runner as Jetpack Joyride](https://gamedev.stackexchange.com/a/113529)
 
-# Implementation
+## Implementation
 
 It's an endless runner, and the speed should increase the longer you run.
 
-## Game Manager
+### Game Manager
 
 The Game Manager keeps track of properties.
 
-### Game state
+#### Game state
 
 At the moment there is 3 game states:
+
 - Game Over
 - New Game
 - Playing (mid-game)
 
-### Speed
+#### Speed
 
 The speed can be within the min (250) and max (1000) speed.
 
-## Parallax background
+### Parallax background
 
 The background is scrolling endlessly using a parallax background.
 
 The speed is tracked through the Game Manager.
 
-## Obstacles/Spawner
+### Obstacles/Spawner
 
 There will be obstacles of different types that stops you from progressing.
 
@@ -69,7 +70,7 @@ The coins should be able to spawn in different shapes/groups. A straight or curv
 
 The systems for spawning collecables and obstacles should be smart enough to not overlap them or make it impossible to collect any collectables.
 
-# Content List
+## Content List
 
 | Type | Name |
 |---|---|
@@ -79,40 +80,40 @@ The systems for spawning collecables and obstacles should be smart enough to not
 | UI | End screen |
 | Level | Main level |
 
-# Technical Guidelines
+## Technical Guidelines
 
-## Software
+### Software
 
 - Godot game engine (for building scenes and levels)
 - Krita (for mocking up scenes and levels)
 - Aseprite (for mocking up scenes and levels)
 
-## File Formats
+### File Formats
 
 - **Mockup images:** .png
 - **Background parallax images:** .png
 - **Levels:** .scene
 
-## Restrictions
+### Restrictions
 
-### Level Design
+#### Level Design
 
 Since it's an endless runner, the level have to be partly generated.
 
 The endless background images are made out of 1080x1080 images that tile well together, like this base one:
 
-![](../../stages/parallax_background/sections/section_1/section_1_part_0.png)
+![stages/section_1_part_0](../../stages/parallax_background/sections/section_1/section_1_part_0.png)
 
-### File Size
+#### File Size
 
 Keep the size of the files as small as possible.
 
 One limitation is GitHub's size limit for single files: 100MB.
 
-## Naming Conventions
+### Naming Conventions
 
 As Godot's naming convention: [snake_case](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#naming-conventions).
 
-## Workflows
+### Workflows
 
 What are the workflows for creating a level?
