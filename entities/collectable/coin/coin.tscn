@@ -1,12 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0daa8774747j"]
+[gd_scene load_steps=16 format=3 uid="uid://c0daa8774747j"]
 
 [ext_resource type="Script" uid="uid://ptasujl4l6g3" path="res://entities/collectable/coin/coin.gd" id="1_6vs20"]
 [ext_resource type="Script" uid="uid://cfq3n2iyp6a4y" path="res://common/components/collect/collectable_2d.gd" id="2_msi5q"]
 [ext_resource type="Script" uid="uid://dxvwxnynmf2v8" path="res://utilities/spawner/spawnable/spawnable.gd" id="3_6t4p2"]
+[ext_resource type="AudioStream" uid="uid://b136bnnohige6" path="res://entities/collectable/coin/collect_1.wav" id="3_an1kk"]
+[ext_resource type="AudioStream" uid="uid://cta7xd2t17myd" path="res://entities/collectable/coin/collect_2.wav" id="4_d56tc"]
 [ext_resource type="Texture2D" uid="uid://bh8eunoerlxqa" path="res://entities/collectable/coin/clock.png" id="6_an1kk"]
-[ext_resource type="AudioStream" uid="uid://dddxumg2gpbga" path="res://assets/original_sfx/coin_pickup_1.wav" id="6_ufq8h"]
-[ext_resource type="AudioStream" uid="uid://ktttb5iuwk8n" path="res://assets/original_sfx/coin_pickup_2.wav" id="7_x7l2a"]
-[ext_resource type="AudioStream" uid="uid://gtjcsh5ad5pr" path="res://assets/original_sfx/coin_pickup_3.wav" id="8_7engc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wuwid"]
 radius = 40.0
@@ -74,7 +73,7 @@ script = ExtResource("1_6vs20")
 [node name="Collectable2D" type="Area2D" parent="."]
 script = ExtResource("2_msi5q")
 identifier = "coin"
-audio_streams = Array[AudioStream]([ExtResource("6_ufq8h"), ExtResource("7_x7l2a"), ExtResource("8_7engc")])
+audio_streams = Array[AudioStream]([ExtResource("3_an1kk"), ExtResource("4_d56tc")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable2D"]
 shape = SubResource("CircleShape2D_wuwid")

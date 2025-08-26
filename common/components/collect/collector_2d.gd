@@ -25,5 +25,6 @@ func _ready() -> void:
 func play_audio(collectable: Collectable2D) -> void:
 	audio_stream_player_2d.stream = collectable.get_audio()
 	if audio_stream_player_2d.stream != null:
+		audio_stream_player_2d.pitch_scale = randf_range(0.9, 1.1)
 		audio_stream_player_2d.play()
 #endregion
