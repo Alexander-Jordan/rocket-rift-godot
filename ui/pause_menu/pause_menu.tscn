@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://f1t8okxjimt2" path="res://ui/base_theme.tres" id="1_yv2ts"]
 [ext_resource type="Script" uid="uid://cmyj5n6golwfj" path="res://ui/pause_menu/pause_menu.gd" id="2_f8cr8"]
-[ext_resource type="AudioStream" uid="uid://cgr7yxitx7ww3" path="res://assets/original_sfx/ui_pause.wav" id="3_it8q3"]
-[ext_resource type="AudioStream" uid="uid://c6gk44kojsfmf" path="res://assets/original_sfx/ui_select.wav" id="4_muf0j"]
+[ext_resource type="AudioStream" uid="uid://5ssarsfb6n06" path="res://ui/pause_menu/ui_pause.wav" id="3_c3jo5"]
+[ext_resource type="AudioStream" uid="uid://bgc40ffs2nr3o" path="res://ui/ui_button.wav" id="4_uraes"]
 [ext_resource type="Texture2D" uid="uid://453j18wu2x47" path="res://ui/audio_icons.png" id="5_mpjth"]
 
 [sub_resource type="Gradient" id="Gradient_irjim"]
@@ -47,8 +47,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_yv2ts")
 script = ExtResource("2_f8cr8")
-audio_paused = ExtResource("3_it8q3")
-audio_select = ExtResource("4_muf0j")
+audio_paused = ExtResource("3_c3jo5")
+audio_select = ExtResource("4_uraes")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
