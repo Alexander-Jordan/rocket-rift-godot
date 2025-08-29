@@ -1,41 +1,41 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtigid26sgbs5"]
+[gd_scene load_steps=18 format=3 uid="uid://dtigid26sgbs5"]
 
 [ext_resource type="Script" uid="uid://df64soe2muduc" path="res://entities/missile/missile.gd" id="1_e4log"]
-[ext_resource type="AudioStream" uid="uid://mgy43m0sw82f" path="res://assets/original_sfx/missile_launch.wav" id="2_40qnw"]
+[ext_resource type="AudioStream" uid="uid://yvcrcq7utd1e" path="res://entities/missile/missile_launch.wav" id="2_4th62"]
 [ext_resource type="Script" uid="uid://b3x22yd8gl660" path="res://common/components/destruct/destructor_2d.gd" id="2_ehd8s"]
-[ext_resource type="Texture2D" uid="uid://c24hev6c7qydd" path="res://gdd/art-bible/assets/obstacles_sprites.png" id="3_37mc4"]
-[ext_resource type="AudioStream" uid="uid://btspxtoyyxgip" path="res://assets/original_sfx/missile_warning.wav" id="3_ig0qo"]
+[ext_resource type="AudioStream" uid="uid://c1vs7w2y5e5yj" path="res://entities/missile/missile_warning.wav" id="3_4th62"]
 [ext_resource type="Script" uid="uid://dxvwxnynmf2v8" path="res://utilities/spawner/spawnable/spawnable.gd" id="4_bn04m"]
+[ext_resource type="AudioStream" uid="uid://csyriwmtixg52" path="res://entities/missile/missile_explosion.wav" id="5_4th62"]
 [ext_resource type="Texture2D" uid="uid://biptq4dk3ujyd" path="res://entities/missile/missile_warning.png" id="5_axx0x"]
-[ext_resource type="AudioStream" uid="uid://bohqgaph88tyi" path="res://assets/original_sfx/rocket_explode_1.wav" id="5_wkpev"]
+[ext_resource type="Texture2D" uid="uid://c6ux174k3hjfr" path="res://entities/missile/missile.png" id="6_4th62"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wn0"]
 size = Vector2(88, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yvap1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4th62"]
 atlas = ExtResource("5_axx0x")
-region = Rect2(128, 0, 64, 64)
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfwfr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_da7m7"]
 atlas = ExtResource("5_axx0x")
-region = Rect2(192, 0, 64, 64)
+region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bom1g"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_08kk4"]
 atlas = ExtResource("5_axx0x")
-region = Rect2(0, 0, 64, 64)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr248"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8pbg"]
 atlas = ExtResource("5_axx0x")
-region = Rect2(64, 0, 64, 64)
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0ufmw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yvap1")
+"texture": SubResource("AtlasTexture_4th62")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pfwfr")
+"texture": SubResource("AtlasTexture_da7m7")
 }],
 "loop": true,
 "name": &"warning_high",
@@ -43,34 +43,56 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bom1g")
+"texture": SubResource("AtlasTexture_08kk4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nr248")
+"texture": SubResource("AtlasTexture_i8pbg")
 }],
 "loop": true,
 "name": &"warning_low",
 "speed": 6.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_4th62"]
+interpolation_mode = 2
+interpolation_color_space = 1
+offsets = PackedFloat32Array(0, 0.0856031, 0.832685, 1)
+colors = PackedColorArray(0.25, 0.2875, 1, 0.176471, 0.7, 0, 0, 1, 1, 0.933333, 0, 1, 1, 1, 1, 0.258824)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_da7m7"]
+gradient = SubResource("Gradient_4th62")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_08kk4"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 15, 1)
+angle_min = -720.0
+angle_max = 720.0
+spread = 15.0
+initial_velocity_min = 250.0
+initial_velocity_max = 500.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.5
+scale_max = 10.0
+color_ramp = SubResource("GradientTexture1D_da7m7")
+
 [node name="Missile" type="Node2D"]
 script = ExtResource("1_e4log")
-audio_launch = ExtResource("2_40qnw")
-audio_warning = ExtResource("3_ig0qo")
+audio_launch = ExtResource("2_4th62")
+audio_warning = ExtResource("3_4th62")
 
 [node name="Destructor2D" type="Area2D" parent="."]
 script = ExtResource("2_ehd8s")
-audio_streams = Array[AudioStream]([ExtResource("5_wkpev")])
+audio_streams = Array[AudioStream]([ExtResource("5_4th62")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destructor2D"]
 position = Vector2(44, 0)
 shape = SubResource("RectangleShape2D_v2wn0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(93, 0)
+position = Vector2(48, 0)
 scale = Vector2(3, 3)
-texture = ExtResource("3_37mc4")
-region_enabled = true
+texture = ExtResource("6_4th62")
 region_rect = Rect2(1, 211, 62, 24)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
@@ -91,3 +113,10 @@ autoplay = "warning_low"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 bus = &"missile"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(94, 0)
+amount = 100
+lifetime = 0.2
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_08kk4")

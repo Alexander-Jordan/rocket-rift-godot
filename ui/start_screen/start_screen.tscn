@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://e4unmckmojc6"]
+[gd_scene load_steps=7 format=3 uid="uid://e4unmckmojc6"]
 
 [ext_resource type="Theme" uid="uid://f1t8okxjimt2" path="res://ui/base_theme.tres" id="1_7nh7e"]
 [ext_resource type="Script" uid="uid://dqor5jpxekqot" path="res://ui/start_screen/start_screen.gd" id="2_gl2r5"]
-[ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="3_psbl7"]
-[ext_resource type="AudioStream" uid="uid://pp5n8lp73sg" path="res://assets/original_sfx/ui_start_travel.wav" id="4_nyax7"]
+[ext_resource type="Texture2D" uid="uid://bh8eunoerlxqa" path="res://entities/collectable/coin/clock.png" id="3_8hm1g"]
+[ext_resource type="FontFile" uid="uid://clr3gfgadenc6" path="res://assets/fonts/nfs_font/NFS_by_JLTV.ttf" id="4_dqv2i"]
+[ext_resource type="AudioStream" uid="uid://qmpeoot234p7" path="res://ui/start_screen/ui_start.wav" id="5_dqv2i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ooxon"]
-atlas = ExtResource("3_psbl7")
+atlas = ExtResource("3_8hm1g")
 region = Rect2(0, 0, 32, 32)
 
 [node name="StartScreen" type="Control"]
@@ -39,7 +40,7 @@ size_flags_horizontal = 8
 
 [node name="coins" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.929412, 0.45098, 1)
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 48
 text = "000"
@@ -57,20 +58,22 @@ theme_override_constants/separation = -64
 
 [node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_colors/font_color = Color(1, 0.725178, 0.802016, 1)
 theme_override_constants/outline_size = 64
+theme_override_fonts/font = ExtResource("4_dqv2i")
 theme_override_font_sizes/font_size = 256
-text = "JETPACK"
+text = "ROCKET"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.7445, 0.27, 1)
+theme_override_colors/font_color = Color(0.88035, 0.000599902, 0.876267, 1)
 theme_override_constants/outline_size = 64
+theme_override_fonts/font = ExtResource("4_dqv2i")
 theme_override_font_sizes/font_size = 256
-text = "JOYRIDE"
+text = "RIFT"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -85,12 +88,12 @@ layout_mode = 2
 size_flags_vertical = 10
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 64
-text = "TOUCH ANYWHERE TO PLAY!"
+text = "TOUCH ANYWHERE TO PLAY"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_nyax7")
+stream = ExtResource("5_dqv2i")
 volume_db = -12.0
 bus = &"ui"

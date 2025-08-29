@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bp72kj0ecgu1t" path="res://entities/zapper/zapper.tscn" id="10_dsiyu"]
 [ext_resource type="Script" uid="uid://cutnfigmsu0wa" path="res://entities/missile/spawner/missile_spawner.gd" id="11_tf6qg"]
 [ext_resource type="PackedScene" uid="uid://dtigid26sgbs5" path="res://entities/missile/missile.tscn" id="12_tc22m"]
+[ext_resource type="AudioStream" uid="uid://b82uo4nxrhfvs" path="res://assets/music/piano_classic/piano-classical-music-347514.mp3" id="13_efrcj"]
 [ext_resource type="Script" uid="uid://drhyed07fn28b" path="res://utilities/music/music_player.gd" id="13_spdfk"]
-[ext_resource type="AudioStream" uid="uid://bpeoke53tynbx" path="res://assets/original_music/01.main_theme.mp3" id="14_8irrw"]
-[ext_resource type="AudioStream" uid="uid://2yotpw8c408v" path="res://assets/original_music/04.home.mp3" id="15_imche"]
+[ext_resource type="AudioStream" uid="uid://b0blv0qkd7mst" path="res://assets/music/buzz_connected/llbuzzll-connected-original-mix-151175.mp3" id="15_efrcj"]
 
 [node name="Main" type="Node2D"]
 
@@ -54,10 +54,9 @@ interval_max = 12.0
 target_node = NodePath("../Player")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("15_imche")
-volume_db = -12.0
+stream = ExtResource("13_efrcj")
 autoplay = true
 bus = &"music"
 script = ExtResource("13_spdfk")
-music_main_theme = ExtResource("14_8irrw")
-music_home = ExtResource("15_imche")
+music_main_theme = ExtResource("15_efrcj")
+music_home = ExtResource("13_efrcj")

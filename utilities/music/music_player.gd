@@ -8,7 +8,7 @@ extends AudioStreamPlayer
 ## The home (menu) music.
 @export var music_home: AudioStream
 
-var volume_db_default: float = -12.0
+var volume_db_default: float = -10.0
 var volume_db_low: float = -20.0
 #endregion
 
@@ -30,7 +30,7 @@ func modify_music(track: AudioStream, volume: float = volume_db_default) -> void
 func on_game_changed(game: int) -> void:
 	match game:
 		GameManager.Game.NEW:
-			modify_music(music_home)
+			modify_music(music_home, 0.0)
 		GameManager.Game.OVER:
 			modify_music(null, volume_db_low)
 		GameManager.Game.PLAYING:

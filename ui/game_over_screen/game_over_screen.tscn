@@ -2,13 +2,13 @@
 
 [ext_resource type="Theme" uid="uid://f1t8okxjimt2" path="res://ui/base_theme.tres" id="1_t2egg"]
 [ext_resource type="Script" uid="uid://3m54w1qs3fir" path="res://ui/game_over_screen/game_over_screen.gd" id="2_rovtf"]
-[ext_resource type="AudioStream" uid="uid://b0m613tntjxfn" path="res://assets/original_sfx/achievement_complete.wav" id="3_q2c20"]
 [ext_resource type="PackedScene" uid="uid://dibncjywm4vpa" path="res://ui/leaderboard/leaderboard_entry.tscn" id="3_tevej"]
-[ext_resource type="Texture2D" uid="uid://botxktqdvtlc4" path="res://entities/collectable/coin/coin_sprite.png" id="4_10ec3"]
-[ext_resource type="AudioStream" uid="uid://c6gk44kojsfmf" path="res://assets/original_sfx/ui_select.wav" id="4_w7vc5"]
+[ext_resource type="AudioStream" uid="uid://2rj4jds4505p" path="res://ui/game_over_screen/ui_level_up.wav" id="3_x77vp"]
+[ext_resource type="AudioStream" uid="uid://bgc40ffs2nr3o" path="res://ui/ui_button.wav" id="4_x77vp"]
+[ext_resource type="Texture2D" uid="uid://bh8eunoerlxqa" path="res://entities/collectable/coin/clock.png" id="6_x77vp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7u26"]
-atlas = ExtResource("4_10ec3")
+atlas = ExtResource("6_x77vp")
 region = Rect2(0, 0, 32, 32)
 
 [node name="GameOverScreen" type="Control"]
@@ -20,8 +20,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_t2egg")
 script = ExtResource("2_rovtf")
-audio_highscore = ExtResource("3_q2c20")
-audio_select = ExtResource("4_w7vc5")
+audio_highscore = ExtResource("3_x77vp")
+audio_select = ExtResource("4_x77vp")
 leaderboard_entry_scene = ExtResource("3_tevej")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -48,7 +48,7 @@ uppercase = true
 
 [node name="distance" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.55, 0, 1)
+theme_override_colors/font_color = Color(0.822232, 0.00135055, 0.930308, 1)
 theme_override_constants/outline_size = 64
 theme_override_font_sizes/font_size = 256
 text = "0M"
@@ -71,7 +71,7 @@ uppercase = true
 
 [node name="coins" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.929412, 0.45098, 1)
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_constants/outline_size = 32
 theme_override_font_sizes/font_size = 64
 text = "0"

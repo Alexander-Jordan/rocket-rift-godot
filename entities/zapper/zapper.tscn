@@ -1,63 +1,133 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp72kj0ecgu1t"]
+[gd_scene load_steps=20 format=3 uid="uid://bp72kj0ecgu1t"]
 
 [ext_resource type="Script" uid="uid://dnwe4k77r7a6x" path="res://entities/zapper/zapper.gd" id="1_unkw2"]
-[ext_resource type="Texture2D" uid="uid://c24hev6c7qydd" path="res://gdd/art-bible/assets/obstacles_sprites.png" id="2_adlbb"]
 [ext_resource type="Script" uid="uid://b3x22yd8gl660" path="res://common/components/destruct/destructor_2d.gd" id="2_t4h62"]
-[ext_resource type="AudioStream" uid="uid://b0w6keqqwo6nl" path="res://assets/original_sfx/dud_zapper_lp.wav" id="3_b5ol5"]
+[ext_resource type="AudioStream" uid="uid://buifsbyt8c225" path="res://entities/zapper/zapped.wav" id="3_ghht3"]
 [ext_resource type="Script" uid="uid://dxvwxnynmf2v8" path="res://utilities/spawner/spawnable/spawnable.gd" id="3_wasl2"]
+[ext_resource type="Texture2D" uid="uid://b13x102ng0gpa" path="res://entities/zapper/zap_orb.png" id="5_e5y8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c455m"]
 size = Vector2(64, 288)
+
+[sub_resource type="Gradient" id="Gradient_ghht3"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.357977, 1)
+colors = PackedColorArray(0.295378, 0.5059, 1, 1, 0.834104, 0.000168939, 0.721687, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e5y8f"]
+gradient = SubResource("Gradient_ghht3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e7e3h"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1, 3, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 5, 1)
+radial_velocity_min = 292.84
+radial_velocity_max = 292.84
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 20.0
+color_ramp = SubResource("GradientTexture1D_e5y8f")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5y8f"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7e3h"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e7hv"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqnu8"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v61fg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5y8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7e3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5e7hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqnu8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tigd7"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evs8l"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28cn7"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1cml"]
+atlas = ExtResource("5_e5y8f")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w865b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tigd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evs8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28cn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1cml")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Zapper" type="Node2D"]
 script = ExtResource("1_unkw2")
 
 [node name="Destructor2D" type="Area2D" parent="."]
 script = ExtResource("2_t4h62")
-audio_streams = Array[AudioStream]([ExtResource("3_b5ol5")])
+audio_streams = Array[AudioStream]([ExtResource("3_ghht3")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destructor2D"]
 shape = SubResource("RectangleShape2D_c455m")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(3, 3)
-texture = ExtResource("2_adlbb")
-region_enabled = true
-region_rect = Rect2(4, 137, 22, 31)
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 200
+lifetime = 0.3
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_e7e3h")
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
-rotation = 1.5708
-scale = Vector2(3, 3)
-texture = ExtResource("2_adlbb")
-region_enabled = true
-region_rect = Rect2(4, 137, 22, 31)
-
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(0, 64)
-rotation = 1.5708
-scale = Vector2(3, 3)
-texture = ExtResource("2_adlbb")
-region_enabled = true
-region_rect = Rect2(4, 137, 22, 31)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="animatedsprite2d_orb_top" type="AnimatedSprite2D" parent="."]
 position = Vector2(-7.62939e-06, -120)
-rotation = 1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("2_adlbb")
-region_enabled = true
-region_rect = Rect2(129, 2, 20, 22)
+sprite_frames = SubResource("SpriteFrames_v61fg")
+autoplay = "default"
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="animatedsprite2d_orb_bottom" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 120)
-rotation = 1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("2_adlbb")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(129, 2, 20, 22)
+sprite_frames = SubResource("SpriteFrames_w865b")
+autoplay = "default"
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-30, -150, 60, 300)

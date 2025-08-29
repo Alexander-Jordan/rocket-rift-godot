@@ -1,59 +1,43 @@
-# JETPACK JOYRIDE - THE REMAKE (Audio Design Document)
+# ROCKET RIFT (Audio Design Document)
 
 ## Table of content
 
 - [Other Design Documents](#other-design-documents)
 - [Outline/Objectives](#outlineobjectives)
-- [Research](#research)
 - [Implementation](#implementation)
-    - [General](#general-1)
-    - [Music](#music-1)
-    - [SFX](#sfx-1)
-    - [UI](#ui-1)
 - [Content List](#content-list)
-    - [Music](#music-2)
-    - [SFX](#sfx-2)
-    - [UI](#ui-2)
 - [Technical Guidelines](#technical-guidelines)
-    - [Software](#software)
-    - [File Formats](#file-formats)
-    - [Restrictions](#restrictions)
-    - [Naming Conventions](#naming-conventions)
-    - [Workflows](#workflows)
+  - [Software](#software)
+  - [File Formats](#file-formats)
+  - [Restrictions](#restrictions)
+  - [Naming Conventions](#naming-conventions)
+  - [Workflows](#workflows)
 
-### Other Design Documents:
+## Other Design Documents
 
 - [GDD](../game-design-document/gdd.md)
 - [Art Bible](../art-bible/art-bible.md)
 - [LDD](../level-design-document/ldd.md)
 
-# Outline/Objectives
+## Outline/Objectives
 
-The audio should be punchy, immersive, and cocky, as in the original Jetpack Joyride.
-
-# Research
-
-### Playlists
-
-[YouTube: Jetpack Joyride Original Soundtrack](https://youtube.com/playlist?list=PLuNyw_z6mVdVP-P786PRmBxqdboTSL8Ja&feature=shared)
-
-[Downloadable: Jetpack Joyride (Original Game Soundtrack)](https://downloads.khinsider.com/game-soundtracks/album/jetpack-joyride-original-game-soundtrack-2021-android-ios)
+The audio should be punchy, immersive, and cocky, as in the original.
 
 ### File formats, compression, and size
 
-#### Lossless uncompressed:
+#### Lossless uncompressed
 
 Size: Big
 Quality: Best
 Formats: `WAV`, `AIFF`
 
-#### Lossless compressed:
+#### Lossless compressed
 
 Size: Medium
 Quality: High
 Formats: `FLAC`, `WMA Lossless`, `ALAC`
 
-#### Lossy compression:
+#### Lossy compression
 
 Size: Small
 Quality: Low
@@ -78,9 +62,9 @@ According to [Audio File Formats | Godot Basics Tutorial | Ep 59](https://www.yo
 
 According to one of the comments in the above Redit post the MP3 format should be avoided for short audio files, such as SFX, since it could lag/delay.
 
-# Implementation
+## Implementation
 
-## General
+### General
 
 There should be 3 audio busses:
 
@@ -88,93 +72,85 @@ There should be 3 audio busses:
 - Music
 - SFX
 
-## Music
+### Music
 
 Toggles for music will either enable or disable the music, which is played throughout the game.
 
-### Main Menu
+#### Main Menu
 
 The music in the main menu should be played before the game starts or when the player returns to the menu.
 
-### In-game
+#### In-game
 
 The theme music should be played as soon as the game starts and the player runs. Maybe the music lowers in volume when entering the pause menu or the end screen. And when running the music should go back to normal volume.
 
 When going back to the main menu the music transitions to that music.
 
-## SFX
+### SFX
 
 Toggles for SFX will either enable or disable the music.
 
-There should be SFX for when the player runs on the floor, the jetpack, obstacles, explosions, alarms/warnings and the slot machine. Also maybe some state SFX like when the game starts or ends.
+There should be SFX for when the player runs on the floor, flies, obstacles, explosions, and alarms/warnings. Also maybe some state SFX like when the game starts or ends.
 
-## UI
+### UI
 
 UI SFX are controlled by the same toggles for SFX, and are under the same bus.
 
 There should be SFX for clicking buttons at least, but maybe even some more.
 
-# Content List
+## Content List
 
-## Music
+### Music list
 
 | Type | Name |
 |---|---|
 | Menu | Main menu music |
 | Game | Main game music |
 
-## SFX
+### SFX list
 
 | Type | Name |
 |---|---|
 | Obstacle | Zapper |
-| Obstacle | Laser |
 | Obstacle | Missile |
 | Obstacle | Warning for missile |
-| Obstacle | Hurt by the zapper/laser |
+| Obstacle | Hurt by the zapper |
 | Obstacle | Hurt by the missile |
 | Environment | Explosion |
 | Player | Running |
-| Player | Revive |
-| Jetpack | Machinegun |
+| Player | Flies |
 | Collectable | Coins |
-| Collectable | Spin tokens |
 
-## UI
+### UI list
 
 | Type | Name |
 |---|---|
 | Button | Button click |
-| Button | Purchase |
-| Slot machine | Pull lever |
-| Slot machine | Slots spin |
-| Slot machine | Win |
-| Slow machine | Lose |
 
-# Technical Guidelines
+## Technical Guidelines
 
-## Software
+### Software
 
 - [Audacity](https://www.audacityteam.org/) (collecting and editing audio)
 - [Pro SFXR](https://pro.sfxr.me/) (generating SFX)
 - [Bosca Ceoil: The Blue Album](https://yurisizov.itch.io/boscaceoil-blue) (creating music)
 - [1BITDRAGON](https://1bitdragon.com/) (creating music)
 
-## File Formats
+### File Formats
 
 - **Music:** .ogg
 - **SFX:** .wav
 
-## Restrictions
+### Restrictions
 
 Keep the size of the files as small as possible.
 
 One limitation is GitHub's size limit for single files: 100MB.
 
-## Naming Conventions
+### Naming Conventions
 
 As Godot's naming convention: [snake_case](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#naming-conventions).
 
-## Workflows
+### Workflows
 
 What are the workflows for creating any audio mentioned in this ADD?
